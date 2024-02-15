@@ -1,7 +1,6 @@
 FROM ubuntu:22.04
 RUN apt-get update \
-    && apt-get install sudo \
-    && sudo apt-get install git -y \
+    && apt-get install sudo git -y \
     && cd /opt \
     && sudo git clone https://github.com/obgm/libcoap.git \
     && cd ./libcoap \
