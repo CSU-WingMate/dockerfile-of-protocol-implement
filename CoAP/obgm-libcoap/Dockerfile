@@ -1,10 +1,9 @@
 FROM ubuntu:22.04
 RUN apt-get update \
-    && apt-get install sudo git -y \
+    && apt-get install sudo git autoconf automake pkgconf libtool doxygen asciidoc -y \
     && cd /opt \
     && sudo git clone https://github.com/obgm/libcoap.git \
     && cd ./libcoap \
-    && sudo apt-get install -y autoconf automake pkgconf libtool doxygen asciidoc \
     && ./autogen.sh \
     && ./configure --disable-dtls \
     && make \
