@@ -4,6 +4,6 @@ RUN  apt-get update \
     && pip install -U pip setuptools \
     && cd opt \
     && sudo git clone https://github.com/giampaolo/pyftpdlib.git \
-    && cd pyftpdlib-master \
+    && cd pyftpdlib \
     && pip install pyopenssl \
     && python3 setup.py install
